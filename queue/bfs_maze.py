@@ -18,6 +18,15 @@ dirs = [
     lambda x,y: (x,y-1),
     lambda x,y: (x,y+1)
 ]
+# dirs = [
+    
+#     lambda x,y: (x,y-1),
+#     lambda x,y: (x-1,y),
+    
+#     lambda x,y: (x,y+1),
+
+#     lambda x,y: (x+1,y)
+# ]
 
 def print_r(path):
     curNode = path[-1]
@@ -27,7 +36,7 @@ def print_r(path):
         curNode = path[curNode[2]]
     real_path.append(curNode[0:2])
     real_path.reverse()
-    # print(real_path)
+    print(len(real_path))
     for node in real_path:
         print(node)
     # return real_path
@@ -51,5 +60,6 @@ def dfs_maze_path(x1,y1,x2,y2):
     else:
         print("没有路")
         return False
-# dfs_maze_path(1,1,8,8)
-print(len(maze))
+dfs_maze_path(1,1,8,8)
+# print(len(maze))
+# print(print_r(maze))

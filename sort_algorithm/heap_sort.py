@@ -50,27 +50,31 @@ def top_small_k(li,k):
 li = [i for i in range(10)]
 import random
 random.shuffle(li)
-print(li)
-print(top_small_k(li,2))
+# print(li)
+# print(top_small_k(li,2))
     
 
 
 def head_sort(li):
     n = len(li)
+    print(n)
     for i in range((n-2)//2,-1,-1):
+        print(i)
+
         # i 表示建堆的时候调整的部分的根的下标
         sift(li,i,n-1)
-    # print(li)
+    print(li)
     for i in range(n-1,-1,-1):
         # i 一直指的是当前堆的最后一个
         li[i],li[0] = li[0],li[i]
         sift(li,0,i-1)
+    print(li)
                 
 
 # li = [i for i in range(100)]
 # import random
 # random.shuffle(li)
-# print(li)
-# head_sort(li)
+print(li)
+head_sort(li)
 
 
